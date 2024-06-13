@@ -1,0 +1,703 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Pham Duc, Congty, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\BTL Nhung\Phathiennga.uvprojx
+Project File Date:  06/12/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+timer.c(1): warning: In file included from...
+./timer.h(4): warning: In file included from...
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+timer.c(7): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+    7 |           TIM4->PSC = (SystemCoreClock / 1000) - 1; // = 71999 => tao ra mot xung tren moi ms;
+      |                     ~ ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+timer.c(13): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+   13 |           TIM3->PSC = (SystemCoreClock / 1000) - 1;  
+      |                     ~ ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+timer.c(22): warning: no newline at end of file [-Wnewline-eof]
+   22 | }
+      |  ^
+6 warnings generated.
+compiling timer.c...
+systick.c(1): warning: In file included from...
+./systick.h(3): warning: In file included from...
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+systick.c(1): warning: In file included from...
+./systick.h(7): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+    7 | uint32_t get_tick();
+      |                  ^
+      |                   void
+./systick.h(9): warning: no newline at end of file [-Wnewline-eof]
+    9 | #endif
+      |       ^
+systick.c(3): warning: no previous extern declaration for non-static variable 'tick_count' [-Wmissing-variable-declarations]
+    3 | volatile uint32_t tick_count = 0;
+      |                   ^
+systick.c(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    3 | volatile uint32_t tick_count = 0;
+      |          ^
+systick.c(5): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+    5 | void SysTick_Handler(){
+      |                     ^
+      |                      void
+systick.c(5): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+    5 | void SysTick_Handler(){
+      |      ^
+systick.c(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+    5 | void SysTick_Handler(){
+      | ^
+      | static 
+systick.c(12): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   12 | uint32_t get_tick(){
+      |                  ^
+      |                   void
+systick.c(12): warning: no previous prototype for function 'get_tick' [-Wmissing-prototypes]
+   12 | uint32_t get_tick(){
+      |          ^
+./systick.h(7): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+    7 | uint32_t get_tick();
+      |          ^        
+      |                   void
+10 warnings generated.
+compiling systick.c...
+adxl345.c(1): warning: In file included from...
+./adxl345.h(5): warning: In file included from...
+./i2c.h(4): warning: In file included from...
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+adxl345.c(1): warning: In file included from...
+./adxl345.h(5): warning: In file included from...
+./i2c.h(5): warning: In file included from...
+./systick.h(7): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+    7 | uint32_t get_tick();
+      |                  ^
+      |                   void
+./systick.h(9): warning: no newline at end of file [-Wnewline-eof]
+    9 | #endif
+      |       ^
+adxl345.c(1): warning: In file included from...
+./adxl345.h(5): warning: In file included from...
+./i2c.h(6): warning: In file included from...
+./gpio.h(28): warning: no newline at end of file [-Wnewline-eof]
+   28 | #endif
+      |       ^
+adxl345.c(1): warning: In file included from...
+./adxl345.h(5): warning: In file included from...
+./i2c.h(28): warning: no newline at end of file [-Wnewline-eof]
+   28 | #endif
+      |       ^
+adxl345.c(2): warning: In file included from...
+./i2c_lcd.h(16): warning: no newline at end of file [-Wnewline-eof]
+   16 | #endif
+      |       ^
+adxl345.c(7): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    7 | #define SCALE 256.0  // Scale factor for <B1>2g range
+      |                                          ^
+adxl345.c(8): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    8 | #define G 9.81  // Gravity constant for converting g to m/s<B2>
+      |                                                            ^
+adxl345.c(10): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+   10 | float alpha = 0.81;
+      |       ~~~~~   ^~~~
+adxl345.c(10): warning: no previous extern declaration for non-static variable 'alpha' [-Wmissing-variable-declarations]
+   10 | float alpha = 0.81;
+      |       ^
+adxl345.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   10 | float alpha = 0.81;
+      | ^
+adxl345.c(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |     // Set data format to full resolution with <B1>2g range
+      |                                                ^
+adxl345.c(44): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+   44 |     raw_x = ((int16_t)data[1] << 8) | data[0];
+      |           ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+adxl345.c(45): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+   45 |     raw_y = ((int16_t)data[3] << 8) | data[2];
+      |           ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+adxl345.c(46): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+   46 |     raw_z = ((int16_t)data[5] << 8) | data[4];
+      |           ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+adxl345.c(48): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+   48 |     *x = (raw_x / SCALE) * G;
+      |        ~ ~~~~~~~~~~~~~~~~^~~
+adxl345.c(49): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+   49 |     *y = (raw_y / SCALE) * G;
+      |        ~ ~~~~~~~~~~~~~~~~^~~
+adxl345.c(50): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+   50 |     *z = (raw_z / SCALE) * G;
+      |        ~ ~~~~~~~~~~~~~~~~^~~
+adxl345.c(38): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   38 |     data[1] = ADXL345_ReadReg(i2c, ADXL345_DATAX1);
+      |     ^~~~
+adxl345.c(39): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   39 |     data[2] = ADXL345_ReadReg(i2c, ADXL345_DATAY0);
+      |     ^~~~
+adxl345.c(40): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   40 |     data[3] = ADXL345_ReadReg(i2c, ADXL345_DATAY1);
+      |     ^~~~
+adxl345.c(41): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   41 |     data[4] = ADXL345_ReadReg(i2c, ADXL345_DATAZ0);
+      |     ^~~~
+adxl345.c(42): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   42 |     data[5] = ADXL345_ReadReg(i2c, ADXL345_DATAZ1);
+      |     ^~~~
+adxl345.c(44): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   44 |     raw_x = ((int16_t)data[1] << 8) | data[0];
+      |                       ^~~~
+adxl345.c(45): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   45 |     raw_y = ((int16_t)data[3] << 8) | data[2];
+      |                       ^~~~
+adxl345.c(45): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   45 |     raw_y = ((int16_t)data[3] << 8) | data[2];
+      |                                       ^~~~
+adxl345.c(46): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   46 |     raw_z = ((int16_t)data[5] << 8) | data[4];
+      |                       ^~~~
+adxl345.c(46): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   46 |     raw_z = ((int16_t)data[5] << 8) | data[4];
+      |                                       ^~~~
+29 warnings generated.
+compiling adxl345.c...
+assembling startup_stm32f10x_md.s...
+gpio.c(1): warning: In file included from...
+./gpio.h(3): warning: In file included from...
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+gpio.c(1): warning: In file included from...
+./gpio.h(28): warning: no newline at end of file [-Wnewline-eof]
+   28 | #endif
+      |       ^
+gpio.c(25): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   25 |         GPIOx->CRL |= (MODE) << (PIN * 4);
+      |                    ~~ ~~~~~~~^~~~~~~~~~~~
+gpio.c(26): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   26 |         GPIOx->CRL |= (CNF) << (PIN * 4 + 2);
+      |                    ~~ ~~~~~~^~~~~~~~~~~~~~~~
+gpio.c(29): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   29 |         GPIOx->CRH |= (MODE) << ((PIN - 8) * 4);
+      |                    ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~
+gpio.c(30): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   30 |         GPIOx->CRH |= (CNF) << ((PIN - 8) * 4 + 2);
+      |                    ~~ ~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+gpio.c(68): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   68 |     uint32_t pin_mask = (1 << PIN);  // Chuy?n d?i PIN th<E0>nh gi<E1> tr? bit
+      |                                                          ^
+gpio.c(68): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   68 |     uint32_t pin_mask = (1 << PIN);  // Chuy?n d?i PIN th<E0>nh gi<E1> tr? bit
+      |                                                                   ^
+10 warnings generated.
+compiling gpio.c...
+RTE/Device/STM32F103C8/system_stm32f10x.c(64): warning: In file included from...
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |             ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |     ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(408): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  408 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+5 warnings generated.
+compiling system_stm32f10x.c...
+i2c_lcd.c(1): warning: In file included from...
+./i2c_lcd.h(3): warning: In file included from...
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+i2c_lcd.c(1): warning: In file included from...
+./i2c_lcd.h(4): warning: In file included from...
+./i2c.h(5): warning: In file included from...
+./systick.h(7): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+    7 | uint32_t get_tick();
+      |                  ^
+      |                   void
+./systick.h(9): warning: no newline at end of file [-Wnewline-eof]
+    9 | #endif
+      |       ^
+i2c_lcd.c(1): warning: In file included from...
+./i2c_lcd.h(4): warning: In file included from...
+./i2c.h(6): warning: In file included from...
+./gpio.h(28): warning: no newline at end of file [-Wnewline-eof]
+   28 | #endif
+      |       ^
+i2c_lcd.c(1): warning: In file included from...
+./i2c_lcd.h(4): warning: In file included from...
+./i2c.h(28): warning: no newline at end of file [-Wnewline-eof]
+   28 | #endif
+      |       ^
+i2c_lcd.c(1): warning: In file included from...
+./i2c_lcd.h(16): warning: no newline at end of file [-Wnewline-eof]
+   16 | #endif
+      |       ^
+i2c_lcd.c(119): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  119 |         lcd_i2c_cmd(i2c,pos + col);
+      |         ~~~~~~~~~~~     ~~~~^~~~~
+i2c_lcd.c(122): warning: no newline at end of file [-Wnewline-eof]
+  122 | }
+      |  ^
+i2c_lcd.c(102): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  102 |                 while(str[i])
+      |                       ^~~
+i2c_lcd.c(104): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  104 |                         lcd_i2c_data(i2c, str[i]);
+      |                                           ^~~
+12 warnings generated.
+compiling i2c_lcd.c...
+i2c.c(1): warning: In file included from...
+./i2c.h(4): warning: In file included from...
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+i2c.c(1): warning: In file included from...
+./i2c.h(5): warning: In file included from...
+./systick.h(7): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+    7 | uint32_t get_tick();
+      |                  ^
+      |                   void
+./systick.h(9): warning: no newline at end of file [-Wnewline-eof]
+    9 | #endif
+      |       ^
+i2c.c(1): warning: In file included from...
+./i2c.h(6): warning: In file included from...
+./gpio.h(28): warning: no newline at end of file [-Wnewline-eof]
+   28 | #endif
+      |       ^
+i2c.c(1): warning: In file included from...
+./i2c.h(28): warning: no newline at end of file [-Wnewline-eof]
+   28 | #endif
+      |       ^
+i2c.c(31): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   31 |                         while (!(I2C1->SR1 & (1 << 0))){};
+      |                                                          ^
+i2c.c(34): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   34 |                         while (!(I2C2->SR1 & (1 << 0))){};
+      |                                                          ^
+i2c.c(45): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   45 |                 while((I2C1->SR1 & (1 << 1))==0){};
+      |                                                   ^
+i2c.c(56): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+   56 |                         while((I2C2->SR1 & (1 << 1))==0){};
+      |                                                           ^
+i2c.c(41): warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+   41 |                 volatile int tmp;
+      |                              ^
+i2c.c(108): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  108 |         data = I2C1->DR;
+      |              ~ ~~~~~~^~
+i2c.c(116): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  116 |         data = I2C2->DR;
+      |              ~ ~~~~~~^~
+i2c.c(114): warning: variable 'data' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+  114 |     } else if (i2c == I2C_2) {
+      |                ^~~~~~~~~~~~
+i2c.c(123): note: uninitialized use occurs here
+  123 |     return data;
+      |            ^~~~
+i2c.c(114): note: remove the 'if' if its condition is always true
+  114 |     } else if (i2c == I2C_2) {
+      |            ^~~~~~~~~~~~~~~~~
+i2c.c(105): note: initialize the variable 'data' to silence this warning
+  105 |     uint8_t data;
+      |                 ^
+      |                  = '\0'
+i2c.c(95): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   95 |         while(data[i]!='\0')
+      |               ^~~~
+i2c.c(97): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   97 |                         i2c_data(i2c, data[i]);
+      |                                       ^~~~
+17 warnings generated.
+compiling i2c.c...
+main.c(2): warning: In file included from...
+./gpio.h(3): warning: In file included from...
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+main.c(2): warning: In file included from...
+./gpio.h(28): warning: no newline at end of file [-Wnewline-eof]
+   28 | #endif
+      |       ^
+main.c(3): warning: In file included from...
+./i2c_lcd.h(4): warning: In file included from...
+./i2c.h(5): warning: In file included from...
+./systick.h(7): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+    7 | uint32_t get_tick();
+      |                  ^
+      |                   void
+./systick.h(9): warning: no newline at end of file [-Wnewline-eof]
+    9 | #endif
+      |       ^
+main.c(3): warning: In file included from...
+./i2c_lcd.h(4): warning: In file included from...
+./i2c.h(28): warning: no newline at end of file [-Wnewline-eof]
+   28 | #endif
+      |       ^
+main.c(3): warning: In file included from...
+./i2c_lcd.h(16): warning: no newline at end of file [-Wnewline-eof]
+   16 | #endif
+      |       ^
+main.c(16): warning: no previous extern declaration for non-static variable 'is_LED_RED_on' [-Wmissing-variable-declarations]
+   16 | uint8_t is_LED_RED_on = 1,is_LED_GREEN_on = 1, trangthai = 1,nga = 0;
+      |         ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   16 | uint8_t is_LED_RED_on = 1,is_LED_GREEN_on = 1, trangthai = 1,nga = 0;
+      | ^
+main.c(16): warning: no previous extern declaration for non-static variable 'is_LED_GREEN_on' [-Wmissing-variable-declarations]
+   16 | uint8_t is_LED_RED_on = 1,is_LED_GREEN_on = 1, trangthai = 1,nga = 0;
+      |                           ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   16 | uint8_t is_LED_RED_on = 1,is_LED_GREEN_on = 1, trangthai = 1,nga = 0;
+      | ^
+main.c(16): warning: no previous extern declaration for non-static variable 'trangthai' [-Wmissing-variable-declarations]
+   16 | uint8_t is_LED_RED_on = 1,is_LED_GREEN_on = 1, trangthai = 1,nga = 0;
+      |                                                ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   16 | uint8_t is_LED_RED_on = 1,is_LED_GREEN_on = 1, trangthai = 1,nga = 0;
+      | ^
+main.c(16): warning: no previous extern declaration for non-static variable 'nga' [-Wmissing-variable-declarations]
+   16 | uint8_t is_LED_RED_on = 1,is_LED_GREEN_on = 1, trangthai = 1,nga = 0;
+      |                                                              ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   16 | uint8_t is_LED_RED_on = 1,is_LED_GREEN_on = 1, trangthai = 1,nga = 0;
+      | ^
+main.c(26): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   26 |     FLASH->ACR &= ~FLASH_ACR_LATENCY;
+      |                ~~ ^~~~~~~~~~~~~~~~~~
+main.c(20): warning: no previous prototype for function 'SystemClock_Config' [-Wmissing-prototypes]
+   20 | void SystemClock_Config(void) {
+      |      ^
+main.c(20): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   20 | void SystemClock_Config(void) {
+      | ^
+      | static 
+main.c(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   48 |                 gpio_init(PortA,3, 0, 1);  // Kh?i t?o ch<E2>n GPIOA-5 l<E0> d?u ra t?ng qu<E1>t
+      |                                                          ^
+main.c(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   48 |                 gpio_init(PortA,3, 0, 1);  // Kh?i t?o ch<E2>n GPIOA-5 l<E0> d?u ra t?ng qu<E1>t
+      |                                                                         ^
+main.c(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   48 |                 gpio_init(PortA,3, 0, 1);  // Kh?i t?o ch<E2>n GPIOA-5 l<E0> d?u ra t?ng qu<E1>t
+      |                                                                                            ^
+main.c(49): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   49 |                 gpio_write(PortA, 3, 0);    // <D0>?t ch<E2>n GPIOA-5 ? m?c cao
+      |                                                ^
+main.c(49): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   49 |                 gpio_write(PortA, 3, 0);    // <D0>?t ch<E2>n GPIOA-5 ? m?c cao
+      |                                                         ^
+main.c(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   50 |                 gpio_init(PortA,4, 0, 1);  // Kh?i t?o ch<E2>n GPIOA-5 l<E0> d?u ra t?ng qu<E1>t
+      |                                                          ^
+main.c(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   50 |                 gpio_init(PortA,4, 0, 1);  // Kh?i t?o ch<E2>n GPIOA-5 l<E0> d?u ra t?ng qu<E1>t
+      |                                                                         ^
+main.c(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   50 |                 gpio_init(PortA,4, 0, 1);  // Kh?i t?o ch<E2>n GPIOA-5 l<E0> d?u ra t?ng qu<E1>t
+      |                                                                                            ^
+main.c(51): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   51 |                 gpio_write(PortA, 4, 0);    // <D0>?t ch<E2>n GPIOA-5 ? m?c cao
+      |                                                ^
+main.c(51): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   51 |                 gpio_write(PortA, 4, 0);    // <D0>?t ch<E2>n GPIOA-5 ? m?c cao
+      |                                                         ^
+main.c(57): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   57 |                 EXTI->FTSR |= EXTI_FTSR_TR0; // Ng?t theo c?ch <E2>m tr<EA>n ch<E2>n 0
+      |                                                                ^
+main.c(57): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   57 |                 EXTI->FTSR |= EXTI_FTSR_TR0; // Ng?t theo c?ch <E2>m tr<EA>n ch<E2>n 0
+      |                                                                        ^
+main.c(57): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   57 |                 EXTI->FTSR |= EXTI_FTSR_TR0; // Ng?t theo c?ch <E2>m tr<EA>n ch<E2>n 0
+      |                                                                                ^
+main.c(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   58 |                 EXTI->FTSR |= EXTI_FTSR_TR1; // Ng?t theo c?ch <E2>m tr<EA>n ch<E2>n 1
+      |                                                                ^
+main.c(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   58 |                 EXTI->FTSR |= EXTI_FTSR_TR1; // Ng?t theo c?ch <E2>m tr<EA>n ch<E2>n 1
+      |                                                                        ^
+main.c(58): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   58 |                 EXTI->FTSR |= EXTI_FTSR_TR1; // Ng?t theo c?ch <E2>m tr<EA>n ch<E2>n 1
+      |                                                                                ^
+main.c(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   65 |     if (EXTI->PR & EXTI_PR_PR0) { // Ki?m tra n?u ng?t du?c k<ED>ch ho?t b?i ch<E2>n 0
+      |                                                              ^
+main.c(65): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   65 |     if (EXTI->PR & EXTI_PR_PR0) { // Ki?m tra n?u ng?t du?c k<ED>ch ho?t b?i ch<E2>n 0
+      |                                                                                ^
+main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   75 |         EXTI->PR |= EXTI_PR_PR0; // X<E1>c nh?n r?ng ng?t d<E3> du?c x? l<FD>
+      |                                      ^
+main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   75 |         EXTI->PR |= EXTI_PR_PR0; // X<E1>c nh?n r?ng ng?t d<E3> du?c x? l<FD>
+      |                                                            ^
+main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   75 |         EXTI->PR |= EXTI_PR_PR0; // X<E1>c nh?n r?ng ng?t d<E3> du?c x? l<FD>
+      |                                                                          ^
+main.c(64): warning: no previous prototype for function 'EXTI0_IRQHandler' [-Wmissing-prototypes]
+   64 | void EXTI0_IRQHandler(void) {
+      |      ^
+main.c(64): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   64 | void EXTI0_IRQHandler(void) {
+      | ^
+      | static 
+main.c(81): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   81 |     if (EXTI->PR & EXTI_PR_PR1) { // Ki?m tra n?u ng?t du?c k<ED>ch ho?t b?i ch<E2>n 1
+      |                                                              ^
+main.c(81): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   81 |     if (EXTI->PR & EXTI_PR_PR1) { // Ki?m tra n?u ng?t du?c k<ED>ch ho?t b?i ch<E2>n 1
+      |                                                                                ^
+main.c(88): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   88 |         EXTI->PR |= EXTI_PR_PR1; // X<E1>c nh?n r?ng ng?t d<E3> du?c x? l<FD>
+      |                                      ^
+main.c(88): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   88 |         EXTI->PR |= EXTI_PR_PR1; // X<E1>c nh?n r?ng ng?t d<E3> du?c x? l<FD>
+      |                                                            ^
+main.c(88): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   88 |         EXTI->PR |= EXTI_PR_PR1; // X<E1>c nh?n r?ng ng?t d<E3> du?c x? l<FD>
+      |                                                                          ^
+main.c(80): warning: no previous prototype for function 'EXTI1_IRQHandler' [-Wmissing-prototypes]
+   80 | void EXTI1_IRQHandler(void) {
+      |      ^
+main.c(80): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   80 | void EXTI1_IRQHandler(void) {
+      | ^
+      | static 
+main.c(91): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   91 | void toggle_LED_Red() {
+      |                    ^
+      |                     void
+main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   93 |         // N?u d<E8>n dang b?t, t?t n<F3> di
+      |                 ^
+main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   93 |         // N?u d<E8>n dang b?t, t?t n<F3> di
+      |                                      ^
+main.c(94): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   94 |         gpio_write(PortA, 3, GPIO_PIN_RESET); // T?t d<E8>n xanh
+      |                                                       ^
+main.c(95): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   95 |         is_LED_RED_on = 0; // C?p nh?t tr?ng th<E1>i l<E0> t?t
+      |                                                ^
+main.c(95): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   95 |         is_LED_RED_on = 0; // C?p nh?t tr?ng th<E1>i l<E0> t?t
+      |                                                       ^
+main.c(97): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   97 |         // N?u d<E8>n dang t?t, b?t n<F3> l<EA>n
+      |                 ^
+main.c(97): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   97 |         // N?u d<E8>n dang t?t, b?t n<F3> l<EA>n
+      |                                      ^
+main.c(97): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   97 |         // N?u d<E8>n dang t?t, b?t n<F3> l<EA>n
+      |                                            ^
+main.c(98): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   98 |         gpio_write(PortA, 3, GPIO_PIN_SET); // B?t d<E8>n xanh
+      |                                                     ^
+main.c(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   99 |         is_LED_RED_on = 1; // C?p nh?t tr?ng th<E1>i l<E0> b?t
+      |                                                ^
+main.c(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   99 |         is_LED_RED_on = 1; // C?p nh?t tr?ng th<E1>i l<E0> b?t
+      |                                                       ^
+main.c(91): warning: no previous prototype for function 'toggle_LED_Red' [-Wmissing-prototypes]
+   91 | void toggle_LED_Red() {
+      |      ^
+main.c(91): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   91 | void toggle_LED_Red() {
+      | ^
+      | static 
+main.c(103): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  103 | void toggle_LED_Green() {
+      |                      ^
+      |                       void
+main.c(105): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  105 |         // N?u d<E8>n dang b?t, t?t n<F3> di
+      |                 ^
+main.c(105): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  105 |         // N?u d<E8>n dang b?t, t?t n<F3> di
+      |                                      ^
+main.c(106): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  106 |         gpio_write(PortA, 4, GPIO_PIN_RESET); // T?t d<E8>n xanh
+      |                                                       ^
+main.c(107): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  107 |         is_LED_GREEN_on = 0; // C?p nh?t tr?ng th<E1>i l<E0> t?t
+      |                                                  ^
+main.c(107): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  107 |         is_LED_GREEN_on = 0; // C?p nh?t tr?ng th<E1>i l<E0> t?t
+      |                                                         ^
+main.c(109): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  109 |         // N?u d<E8>n dang t?t, b?t n<F3> l<EA>n
+      |                 ^
+main.c(109): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  109 |         // N?u d<E8>n dang t?t, b?t n<F3> l<EA>n
+      |                                      ^
+main.c(109): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  109 |         // N?u d<E8>n dang t?t, b?t n<F3> l<EA>n
+      |                                            ^
+main.c(110): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  110 |         gpio_write(PortA, 4, GPIO_PIN_SET); // B?t d<E8>n xanh
+      |                                                     ^
+main.c(111): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  111 |         is_LED_GREEN_on = 1; // C?p nh?t tr?ng th<E1>i l<E0> b?t
+      |                                                  ^
+main.c(111): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  111 |         is_LED_GREEN_on = 1; // C?p nh?t tr?ng th<E1>i l<E0> b?t
+      |                                                         ^
+main.c(103): warning: no previous prototype for function 'toggle_LED_Green' [-Wmissing-prototypes]
+  103 | void toggle_LED_Green() {
+      |      ^
+main.c(103): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  103 | void toggle_LED_Green() {
+      | ^
+      | static 
+main.c(114): warning: no previous prototype for function 'TIM4_IRQHandler' [-Wmissing-prototypes]
+  114 | void TIM4_IRQHandler(void)
+      |      ^
+main.c(114): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  114 | void TIM4_IRQHandler(void)
+      | ^
+      | static 
+main.c(127): warning: no previous prototype for function 'TIM3_IRQHandler' [-Wmissing-prototypes]
+  127 | void TIM3_IRQHandler(void) {
+      |      ^
+main.c(127): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  127 | void TIM3_IRQHandler(void) {
+      | ^
+      | static 
+main.c(170): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  170 |                                 if(sqrt(pow(x,2)+pow(y,2)+pow(z,2)) > 6 && fabs(z) > 3){
+      |                                                                            ~~~~ ^
+main.c(170): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  170 |                                 if(sqrt(pow(x,2)+pow(y,2)+pow(z,2)) > 6 && fabs(z) > 3){
+      |                                                           ~~~ ^
+main.c(170): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  170 |                                 if(sqrt(pow(x,2)+pow(y,2)+pow(z,2)) > 6 && fabs(z) > 3){
+      |                                                  ~~~ ^
+main.c(170): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  170 |                                 if(sqrt(pow(x,2)+pow(y,2)+pow(z,2)) > 6 && fabs(z) > 3){
+      |                                         ~~~ ^
+main.c(144): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  144 |     float x, y, z;  // Variables to hold accelerometer data
+      |           ^
+main.c(145): warning: unused variable 'buffer' [-Wunused-variable]
+  145 |     char buffer[32];  // Buffer to hold the string for LCD display
+      |          ^~~~~~
+76 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=13988 RO-data=460 RW-data=12 ZI-data=1640  
+FromELF: creating hex file...
+".\Objects\Phathiennga.axf" - 0 Error(s), 165 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/ASUS/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: Keil::Device:Startup@1.0.0
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
